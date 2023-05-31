@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div>
+      <div class="imagem">
+        <img src="/img/IMG-20230514-WA0033_232134 - Copia.png" alt="">
+      </div>
+      <div class="titulo1">
+      <h1>Quais são os ingredientes?!</h1>
+  </div>
+    </div>
+    <div class="teste">
+      <div class="lista-de-Ingredientes">
+        <!-- Ingredientes -->
+        <h1>Ingredientes</h1>
+        <h2>Chocolate</h2>
+        <h2>Manteiga</h2>
+        <h2>Leite condensado</h2>
+        <h2>Leite em pó</h2>
+        <h2>Café solúvel</h2>
+        <h2>Coco Ralado</h2>
+      </div>
+
+      <div class="quantidade">
+        <!-- quantidade -->
+        <h1>Quantidade</h1>
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+      </div>
+
+      <div class="valor">
+        <!-- Valor -->
+        <h1>Valor</h1>
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+        <input type="number" name="" id="">
+      </div>
+    </div>
+    <div class="botao">
+      <button type="submit">Calcular</button>
+    </div>
+  </div>
+</body>
+
+</html>

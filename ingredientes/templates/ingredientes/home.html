@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'ingredientes/css/style.css' %}">
+
+    <title>Software de Bombons</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="{% static 'img/IMG-20230514-WA0033_232134 - Copia.png' %}" alt="">
+        </div>
+        <div class="titulo">
+            <h1>Quais são os ingredientes?!</h1>
+        </div>
+        <form method="POST" action="{% url 'resultados' %}">
+            {% csrf_token %}
+            
+            <div class="subtitulo">
+                <div class="lista-de-Ingredientes">
+                    <!-- Ingredientes -->
+                    <h2 class="ingrediente-title">Ingredientes</h2>
+                    <h2 class="ingredientes">Chocolate</h2>
+                    <h2 class="ingredientes">Manteiga</h2>
+                    <h2 class="leite-Condensado ingredientes">Leite condensado</h2>
+                    <h2 class="ingredientes call">Leite em pó</h2>
+                    <h2 class="ingredientes call">Café solúvel</h2>
+                    <h2 class="ingredientes call">Coco Ralado</h2>
+                </div>
+
+                <div class="quantidade">
+                    <!-- quantidade -->
+                    <h2>Quantidade</h2>
+                    <input type="number" name="quantidade-Chocolate" id="" value="1000" required>
+                    <input type="number" name="quantidade-Manteiga" id="" value="500" required>
+                    <input type="number" name="quantidade-Leite-condensado" id="" value="395" required>
+                    <input type="number" name="quantidade-Leite-em-po" id="" value="200" required>
+                    <input type="number" name="quantidade-cafe" id="" value="100" required>
+                    <input type="number" name="quantidade-coco" id="" value="500" required>
+                </div>
+
+                <div class="valor">
+                    <!-- Valor -->
+                    <h2>Valor</h2>
+                    <input type="number" name="valor-Chocolate" id="" value="29"  required>
+                    <input type="number" name="valor-Manteiga" id="" value="10" required>
+                    <input type="number" name="valor-Leite-condensado" id="" value="4" required>
+                    <input type="number" name="valor-Leite-em-po" id="" value="7" required>
+                    <input type="number" name="valor-cafe" id="" value="14" required>
+                    <input type="number" name="valor-coco" id="" value="18" required>
+                </div>
+            </div>
+            <div class="botao">
+                <button type="submit"  >Calcular</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

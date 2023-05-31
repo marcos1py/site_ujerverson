@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'ingredientes/css/style_resultados.css' %}">
+
+    <title>Software de Bombons</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imagem">
+            <img src="{% static 'img/IMG-20230514-WA0033_232134 - Copia.png' %}" alt="">
+        </div>
+        <div class="titulo">
+            <h1>RESULTADOS!</h1>
+        </div>
+        
+        <form method="POST" action="{% url 'resultados' %}">
+            {% csrf_token %}
+
+            <div class="subtitulo">
+                <div class="lista-de-Ingredientes">
+                    <!-- Ingredientes -->
+                    <h2 class="sub">Receitas</h2>
+                    <h2 class="receitas">Receita 1</h2>
+                    <h2 class="receitas">Receita 2</h2>
+                    <h2 class="receitas">Receita 3</h2>
+                </div>
+
+                <div class="quantidade Qntd">
+                    <!-- quantidade -->
+                    <h2 class="sub">Qntd</h2>
+                    <input type="number" name="quantidade1" id="" value="1" required>
+                    <input type="number" name="quantidade2" id="" value="1" required>
+                    <input type="number" name="quantidade3" id="" value="1" required>
+                </div>
+
+                <div class="valor Preço-Unitario">
+                    <!-- Valor -->
+                    <h2 class="sub">Preço Unitario</h2>
+                    <input type="number" name="valor1" id="" value="2" required>
+                    <input type="number" name="valor2" id="" value="2" required>
+                    <input type="number" name="valor3" id="" value="2" required>
+                </div>
+                <div class="lista-de-Ingredientes lucro">
+                    <!-- Preço/ receit -->
+                    <h2 class="sub">Preço/ receita</h2>
+                    <h2 class="">{{valor_da_receita1}}</h2>
+                    <h2 class="">{{valor_da_receita2}}</h2>
+                    <h2 class="">{{valor_da_receita3}}</h2>
+                </div>
+                <div class="lista-de-Ingredientes lucro">
+                    <!-- lucro -->
+                    <h2 class="sub">lucro</h2>
+                    <h2 class="">{{valor_do_lucro1}}</h2>
+                    <h2 class="">{{valor_do_lucro2}}</h2>
+                    <h2 class="">{{valor_do_lucro3}}</h2>
+                </div>
+                <div class="lista-de-Ingredientes status">
+                    <!-- Status -->
+                    <h2 class="sub">Status</h2>
+                    <img class="status-img" src="{% static 'img/'|add:'imgFALSE'|add:'.png' %}" alt="">
+                    <img class="status-img" src="{% static 'img/'|add:'imgFALSE'|add:'.png' %}" alt="">
+                    <img class="status-img" src="{% static 'img/'|add:'imgFALSE'|add:'.png' %}" alt="">
+                </div>
+            </div>
+            <div class="botao">
+                <button type="submit">Atualizar o valor</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
