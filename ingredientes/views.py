@@ -21,9 +21,6 @@ def home(request):
         aumentarReceita = 1
         valorUnitarioU = 2.0
 
-        aumentarReceita = 1
-        valorUnitarioU = 2.0
-
         valor_da_receita1 ,valor_da_unidade1,valor_do_lucro1, status_ninho1 = calcular_receita_leite_po(quantidadeChocolate, quantidadeLeiteCondensado, quantidadeManteiga, quantidadeLeiteEmPo, valorChocolate, valorLeiteCondensado,valorManteiga, valorLeiteEmPo, aumentarReceita, valorUnitarioU)
         valor_da_receita2 ,valor_da_unidade2,valor_do_lucro2, status_cafe1 = calcular_receita_cafe(quantidadeChocolate, quantidadeLeiteCondensado, quantidadeManteiga, quantidadeCafe, valorChocolate, valorLeiteCondensado,valorManteiga, valorCafe, aumentarReceita, valorUnitarioU)
         valor_da_receita3 ,valor_da_unidade3,valor_do_lucro3, status_coco1 = calcular_receita_coco(quantidadeChocolate, quantidadeLeiteCondensado, quantidadeManteiga, quantidadeCoco, valorChocolate, valorLeiteCondensado,valorManteiga, valorCoco, aumentarReceita, valorUnitarioU)
@@ -79,7 +76,7 @@ def resultados(request):
         valorChocolate = float(request.POST.get('valor-Chocolate', 0.0))
         valorManteiga = float(request.POST.get('valor-Manteiga', 0.0))
         valorLeiteCondensado = float(request.POST.get('valor-Leite-condensado', 0.0))
-        valorLeiteEmPo = float(request.POST.get('valor-Leite-em-po', 0.0))
+        valorLeiteEmPo = float(request.POST.get('valor-Leite-em-    o', 0.0))
         valorCafe = float(request.POST.get('valor-cafe', 0.0))
         valorCoco = float(request.POST.get('valor-coco', 0.0))
 
