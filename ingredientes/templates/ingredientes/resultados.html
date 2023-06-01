@@ -37,17 +37,17 @@
                 <div class="quantidade Qntd">
                     <!-- quantidade -->
                     <h2 class="sub">Qntd</h2>
-                    <input type="number" name="quantidade1" id="" value="1" required>
-                    <input type="number" name="quantidade2" id="" value="1" required>
-                    <input type="number" name="quantidade3" id="" value="1" required>
+                    <input type="number" name="quantidade1" id="" value="{{quantidade_receita1}}" required>
+                    <input type="number" name="quantidade2" id="" value="{{quantidade_receita2}}" required>
+                    <input type="number" name="quantidade3" id="" value="{{quantidade_receita3}}" required>
                 </div>
 
                 <div class="valor Preço-Unitario">
                     <!-- Valor -->
                     <h2 class="sub">Preço Unitario</h2>
-                    <input type="number" name="valor1" id="" value="2" required>
-                    <input type="number" name="valor2" id="" value="2" required>
-                    <input type="number" name="valor3" id="" value="2" required>
+                    <input type="number" name="valor1" id="" value="{{valor_de_venda1}}" required>
+                    <input type="number" name="valor2" id="" value="{{valor_de_venda2}}" required>
+                    <input type="number" name="valor3" id="" value="{{valor_de_venda3}}" required>
                 </div>
                 <div class="lista-de-Ingredientes lucro">
                     <!-- Preço/ receit -->
@@ -66,13 +66,13 @@
                 <div class="lista-de-Ingredientes status">
                     <!-- Status -->
                     <h2 class="sub">Status</h2>
-                    <img class="status-img" src="{% static 'img/'|add:'imgFALSE'|add:'.png' %}" alt="">
-                    <img class="status-img" src="{% static 'img/'|add:'imgFALSE'|add:'.png' %}" alt="">
-                    <img class="status-img" src="{% static 'img/'|add:'imgFALSE'|add:'.png' %}" alt="">
+                    <img class="status-img" src="{% static 'img/'|add:status_ninho1|add:'.png' %}" alt="">
+                    <img class="status-img" src="{% static 'img/'|add:status_cafe1|add:'.png' %}" alt="">
+                    <img class="status-img" src="{% static 'img/'|add:status_coco1|add:'.png' %}" alt="">
                 </div>
             </div>
             <div class="botao">
-                <button type="submit">Atualizar o valor</button>
+                <input type="submit" value="atualizar" name="acao">
             </div>
         </form>
     </div>
